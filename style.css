@@ -1,3 +1,7 @@
 body{
     background-color: black;
+    color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
