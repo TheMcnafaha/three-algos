@@ -3,5 +3,75 @@ body{
     color: #fff;
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
+    align-items: flex-start;
 }
+
+body *{
+    box-sizing: border-box;
+}
+main{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.setup{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.setup p{
+    width: 60%;
+}
+
+.setup-input-grid{
+    display: grid;
+    grid-template-rows: 80% 1fr;
+}
+.setup-input{
+   display: flex;
+   justify-content: start;
+   gap: .5rem;
+}
+
+.setup-input div{
+    display: flex;
+    flex-flow: column;
+
+    justify-content: space-evenly;
+}
+.setup-input +button{
+    border-radius:5%;
+    
+
+}
+
+.setup-check{
+    font-size: 1.1rem;
+    margin-top: 4em;
+    text-align: center;
+
+}
+
+button{
+    background-color: transparent;
+   
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: .5em;
+    color: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: #fff solid;
+
+    border-width: .1em;
+
+}
+
