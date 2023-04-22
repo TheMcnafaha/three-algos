@@ -20,3 +20,33 @@ function makeNumber(start, end) {
     }
     return tempArr;
 }
+function setUpThreeDS() {
+    return { needle: Number(numberInput.value), haystack: makeNumber(Number(startInput.value), Number(endInput.value)) };
+}
+/* THE DOM WORLD
+          ,  ,
+          \\ \\
+          ) \\ \\    _p_
+          )^\))\))  /  *\
+           \_|| || / /^`-'
+  __       -\ \\--/ /
+<'  \\___/   ___. )'
+     `====\ )___/\\
+          //     `"
+          \\    /  \
+          `"
+
+*/
+// user inputs
+var startInput = document.getElementById("start");
+var endInput = document.getElementById("end");
+var numberInput = document.getElementById("number");
+// user triggers
+var setupBtn = document.getElementById("setup");
+// global vars 🤮🤮🤮
+var threeAlgoArr;
+//event mayhem
+setupBtn === null || setupBtn === void 0 ? void 0 : setupBtn.addEventListener("click", function () {
+    threeAlgoArr = setUpThreeDS();
+    console.log(threeAlgoArr);
+});
