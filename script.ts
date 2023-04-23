@@ -45,8 +45,6 @@ function setUpThreeDS(): ThreeAlgosDS {
 
 //doom thingys
 
-const setupToggle=document.getElementById("setup-toggle")
-
 // user inputs
 const startInput = document.getElementById(`start`) as HTMLInputElement
 const endInput = document.getElementById(`end`) as HTMLInputElement
@@ -63,6 +61,7 @@ let threeAlgoArr: ThreeAlgosDS
 
 setupBtn?.addEventListener(`click`, () => {
   threeAlgoArr = setUpThreeDS()
+  document.getElementById(`hidden`)?.classList.remove(`hidden`)
 })
 
 
