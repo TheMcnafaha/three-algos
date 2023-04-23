@@ -1,4 +1,3 @@
-console.log("hello world");
 //for this function, assume the expected outcome to be(start,end+1]
 //while the input (from user) is (start,end)
 function makeNumber(start, end) {
@@ -37,6 +36,8 @@ function setUpThreeDS() {
           `"
 
 */
+//doom thingys
+var setupToggle = document.getElementById("setup-toggle");
 // user inputs
 var startInput = document.getElementById("start");
 var endInput = document.getElementById("end");
@@ -48,5 +49,4 @@ var threeAlgoArr;
 //event mayhem
 setupBtn === null || setupBtn === void 0 ? void 0 : setupBtn.addEventListener("click", function () {
     threeAlgoArr = setUpThreeDS();
-    console.log(threeAlgoArr);
 });

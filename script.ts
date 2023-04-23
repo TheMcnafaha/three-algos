@@ -1,5 +1,3 @@
-
-console.log(`hello world`)
 // code preface
 type NumberArr = Array<number>
 
@@ -45,7 +43,9 @@ function setUpThreeDS(): ThreeAlgosDS {
 
 */
 
+//doom thingys
 
+const setupToggle=document.getElementById("setup-toggle")
 
 // user inputs
 const startInput = document.getElementById(`start`) as HTMLInputElement
@@ -63,7 +63,6 @@ let threeAlgoArr: ThreeAlgosDS
 
 setupBtn?.addEventListener(`click`, () => {
   threeAlgoArr = setUpThreeDS()
-  console.log(threeAlgoArr)
 })
 
 
