@@ -10,7 +10,7 @@ body *{
     box-sizing: border-box;
 }
 main{
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -78,4 +78,33 @@ button{
 /* toggles */
 .hidden{
     visibility: hidden;
+}
+
+.algo-comp__text{
+    border: 1px solid #fff;
+    padding: .4em 0.7em;
+   
+}
+.algo-comp__text h3{
+    text-align: center;
+}
+.algo-comp__choices{
+    display: flex;
+    flex-flow: column;
+}
+.algo-comp{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 300px;
+}
+
+.algo-comp input{
+    background-color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    box-shadow: 0;
+    padding: .5em;
 }
