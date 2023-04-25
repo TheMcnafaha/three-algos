@@ -23,8 +23,33 @@ function makeNumber(start, end) {
 function setUpThreeDS() {
     return { needle: Number(numberInput.value), haystack: makeNumber(Number(startInput.value), Number(endInput.value)) };
 }
-/* THE DOM WORLD
-          ,  ,
+function singleTurnBS(state, startIndex, endIndex) {
+    if (state.needle === undefined || state.haystack === undefined) {
+        throw Error(`undefined state`);
+    }
+    if (startIndex > endIndex) {
+        return { value: false, done: true };
+    }
+    const middlepoint = Math.floor(startIndex + (endIndex - startIndex) / 2);
+    const middleValue = state.haystack[middlepoint];
+    if (state.needle === middleValue) {
+        return { value: middleValue, done: true };
+    }
+    if (state.needle < middleValue) {
+        return { value: [startIndex, middlepoint], done: false };
+    }
+    return { value: [startIndex + 1, endIndex], done: false };
+}
+function nextMessageIterator(input) {
+    if (input === false) {
+        return "We could not find your number :(";
+    }
+    if (input instanceof Array) {
+        return `Is  ${input[1]} bigger or less than your number?`;
+    }
+    return `Is  ${input} bigger or less than your number?`;
+}
+/*
           \\ \\
           ) \\ \\    _p_
           )^\))\))  /  *\
@@ -38,6 +63,7 @@ function setUpThreeDS() {
 
 */
 //doom thingys
+const BS_text = document.getElementById('BS_text');
 // user inputs
 const startInput = document.getElementById(`start`);
 const endInput = document.getElementById(`end`);
@@ -51,4 +77,13 @@ setupBtn === null || setupBtn === void 0 ? void 0 : setupBtn.addEventListener(`c
     var _a;
     threeAlgoArr = setUpThreeDS();
     (_a = document.getElementById(`hidden`)) === null || _a === void 0 ? void 0 : _a.classList.remove(`hidden`);
+    // check for nulls lul
+    if (BS_text === null) {
+        throw Error(`element doesnt exist`);
+    }
+    if (!threeAlgoArr.haystack) {
+        throw Error(`state is not defined`);
+    }
+    const magic = singleTurnBS(threeAlgoArr, 0, threeAlgoArr.haystack.length);
+    BS_text.innerHTML = nextMessageIterator(magic.value);
 });
