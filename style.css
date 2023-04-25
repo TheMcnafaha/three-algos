@@ -1,110 +1,114 @@
-body{
-    background-color: black;
-    color: #fff;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
+body {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
 }
 
-body *{
-    box-sizing: border-box;
+body * {
+  box-sizing: border-box;
 }
-main{
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-h1{
-    text-align: center;
+main {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.setup{
-    display: flex;
-    justify-content: space-between;
+h1 {
+  text-align: center;
 }
 
-
-.setup p{
-    width: 60%;
+.setup {
+  display: flex;
+  justify-content: space-between;
 }
 
-.setup-input-grid{
-    display: grid;
-    grid-template-rows: 80% 1fr;
-}
-.setup-input{
-   display: flex;
-   justify-content: start;
-   gap: .5rem;
+.setup p {
+  width: 60%;
 }
 
-.setup-input div{
-    display: flex;
-    flex-flow: column;
-
-    justify-content: space-evenly;
+.setup-input-grid {
+  display: grid;
+  grid-template-rows: 80% 1fr;
 }
-.setup-input +button{
-    border-radius:5%;
-    
-
+.setup-input {
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
 }
 
-.setup-check{
-    font-size: 1.1rem;
-    margin-top: 4em;
-    text-align: center;
+.setup-input div {
+  display: flex;
+  flex-flow: column;
 
+  justify-content: space-evenly;
+}
+.setup-input + button {
+  border-radius: 5%;
 }
 
-button{
-    background-color: transparent;
-   
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    padding: .5em;
-    color: inherit;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: #fff solid;
+.setup-check {
+  font-size: 1.1rem;
+  margin-top: 4em;
+  text-align: center;
+}
 
-    border-width: .1em;
+button {
+  background-color: transparent;
 
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0.5em;
+  color: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: #fff solid;
+
+  border-width: 0.1em;
 }
 
 /* toggles */
-.hidden{
-    visibility: hidden;
+.hidden {
+  visibility: hidden;
 }
 
-.algo-comp__text{
-    border: 1px solid #fff;
-    padding: .4em 0.7em;
-   
+.algo-comp__text {
+  border: 1px solid #fff;
+  padding: 1em;
+  padding-top: 0;
+  margin: 0 auto;
 }
-.algo-comp__text h3{
-    text-align: center;
+.algo-comp__text h3 {
+  text-align: center;
 }
-.algo-comp__choices{
-    display: flex;
-    flex-flow: column;
+.algo-comp__choices {
+  display: flex;
+  flex-flow: column;
 }
-.algo-comp{
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 300px;
+.algo-comp {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 250px;
 }
 
-.algo-comp input{
-    background-color: #fff;
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    box-shadow: 0;
-    padding: .5em;
+.algo-comp input {
+  border: 0;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  box-shadow: 0;
+  padding: 0.5em;
+}
+
+.algos-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 1em;
 }
